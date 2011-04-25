@@ -1,4 +1,7 @@
 Shouter::Application.routes.draw do
+
+  resources :shouts, :only => [:new, :create, :index]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

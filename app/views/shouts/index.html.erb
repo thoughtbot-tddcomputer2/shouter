@@ -1,0 +1,9 @@
+<%= link_to "New Shout", new_shout_path %>
+
+<ul>
+	<% @shouts.each do |shout| %>
+		<li>
+			<%= shout.body %>
+		</li>
+	<% end %>
+</ul>
