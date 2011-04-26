@@ -1,4 +1,13 @@
-<%= link_to "New Shout", new_shout_path %>
+<div class="form">
+	<%= form_for @shout do |form| %>
+		<p>
+			<%= form.text_field :body %>
+		</p>
+		<p>
+			<%= form.submit %>
+		</p>
+	<% end %>
+</div>
 
 <ul>
 	<% @shouts.each do |shout| %>
