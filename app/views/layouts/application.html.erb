@@ -8,6 +8,10 @@
 </head>
 <body>
 
+	<% if signed_in? %>
+		<%= link_to "Sign out", sign_out_path, :method => :delete %>
+	<% end %>
+
 	<%flash.each do |key, value| %>
 		<div class="flash_<%= key %>">
 			<%= value %>

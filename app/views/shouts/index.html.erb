@@ -12,11 +12,15 @@
 <ul>
 	<% @shouts.each do |shout| %>
 		<li>
+			<%= gravatar(shout.user) %>
 			<%= highlight(auto_link(h(shout.body)), 'blogthings') %>
 			<span class="time">
 				<%= time_ago_in_words(shout.created_at, include_seconds = true) %> ago
-				<%= link_to "Delete", shout_path(shout.id), :method => "delete", :confirm => "Delete this shout?" %>
 			</span>
+			<span class="user">
+			by <%= shout.user.email %>
+							<%= link_to "Delete", shout_path(shout.id), :method => "delete", :confirm => "Delete this shout?" %>
+				</span>
 		</li>
 	<% end %>
 </ul>

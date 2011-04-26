@@ -1,27 +1,31 @@
 .flash_notice {
 	background: pink;
 	color: black;
-	}
+}
 	
-	.flash_failure{
+.flash_failure {
 	background: red;
 	color: black;
-	}
+}
 	
 .time {
 	color: gray;
 	font-size: 80%;
 }
 
-.highlight{
+.user {
+	color: black;
+	font-size: 80%;
+}
+
+.highlight {
 	font-size: 120%;
 }
 
-ul
-{
+ul {
 list-style: none;
 padding: 6px;
 margin: 2px;
 line-height: 2em;
-background-color: #EEEEEE;
+background-color: gainsboro;
 }

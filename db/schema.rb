@@ -10,12 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110425184410) do
+ActiveRecord::Schema.define(:version => 20110426192747) do
 
   create_table "shouts", :force => true do |t|
-    t.string   "body",       :limit => 140, :default => "", :null => false
+    t.string    "body",       :limit => 140, :default => "", :null => false
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "encrypted_password", :limit => 128
+    t.string   "salt",               :limit => 128
+    t.string   "confirmation_token", :limit => 128
+    t.string   "remember_token",     :limit => 128
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email"
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end
