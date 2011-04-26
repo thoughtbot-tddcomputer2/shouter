@@ -15,4 +15,10 @@ class ShoutsController < ApplicationController
 		end
 		redirect_to root_path
   end
+  
+  def destroy
+  	@shout = Shout.find(params[:id])
+  	@shout.destroy
+  	redirect_to root_path
+  end
 end

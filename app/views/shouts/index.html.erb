@@ -15,6 +15,7 @@
 			<%= highlight(auto_link(h(shout.body)), 'blogthings') %>
 			<span class="time">
 				<%= time_ago_in_words shout.created_at %> ago
+				<%= link_to "Delete", shout_path(shout.id), :method => "delete", :confirm => "Delete this shout?" %>
 			</span>
 		</li>
 	<% end %>
