@@ -17,6 +17,6 @@ class ShoutsController < ApplicationController
 		else
 			flash[:failure] = "You didn't shout successfully!"
 		end
-		redirect_to shouts_path
+		redirect_to root_path
   end
 end
