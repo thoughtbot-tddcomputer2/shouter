@@ -4,7 +4,7 @@
 			<%= form.text_field :body %>
 		</p>
 		<p>
-			<%= form.submit %>
+			<%= submit_tag "Shout!" %>
 		</p>
 	<% end %>
 </div>
@@ -12,7 +12,10 @@
 <ul>
 	<% @shouts.each do |shout| %>
 		<li>
-			<%= shout.body %>
+			<%= highlight(auto_link(h(shout.body)), 'blogthings') %>
+			<span class="time">
+				<%= time_ago_in_words shout.created_at %> ago
+			</span>
 		</li>
 	<% end %>
 </ul>

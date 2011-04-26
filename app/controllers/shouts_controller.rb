@@ -2,7 +2,7 @@ class ShoutsController < ApplicationController
 
 	def index
 		@shouts = Shout.latest
-  	@shout = Shout.new
+  	@shout  = Shout.new
 	end
 	
   def new
@@ -12,6 +12,11 @@ class ShoutsController < ApplicationController
   def create
   	@shout = Shout.new(params[:shout])
 		@shout.save
-		redirect_to shouts_path, :notice => "You shouted successfully!"
+		if @shout.save
+			flash[:notice] = "You shouted successfully!"
+		else
+			flash[:failure] = "You didn't shout successfully!"
+		end
+		redirect_to shouts_path
   end
 end

@@ -2,3 +2,26 @@
 	background: pink;
 	color: black;
 	}
+	
+	.flash_failure{
+	background: red;
+	color: black;
+	}
+	
+.time {
+	color: gray;
+	font-size: 80%;
+}
+
+.highlight{
+	font-size: 120%;
+}
+
+ul
+{
+list-style: none;
+padding: 6px;
+margin: 2px;
+line-height: 2em;
+background-color: #EEEEEE;
+}
