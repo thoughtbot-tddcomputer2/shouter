@@ -11,7 +11,7 @@ module ApplicationHelper
 		hash = Digest::MD5.hexdigest(user.email)
 
 		# compile URL which can be used in <img src="RIGHT_HERE"...
-		image_tag "http://www.gravatar.com/avatar/#{hash}?s=#{size}"
+		image_tag "http://www.gravatar.com/avatar/#{hash}?s=#{size}&d=monsterid"
 	end
 	
 end
