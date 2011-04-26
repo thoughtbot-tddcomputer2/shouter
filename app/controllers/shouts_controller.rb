@@ -1,7 +1,7 @@
 class ShoutsController < ApplicationController
 
 	def index
-		@shouts = Shout.all.reverse
+		@shouts = Shout.latest
   	@shout = Shout.new
 	end
 	
