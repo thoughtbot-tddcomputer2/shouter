@@ -4,10 +4,6 @@ class ShoutsController < ApplicationController
 		@shouts = Shout.latest
   	@shout  = Shout.new
 	end
-	
-  def new
-  	@shout = Shout.new
-  end
   
   def create
   	@shout = Shout.new(params[:shout])
